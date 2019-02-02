@@ -43,6 +43,37 @@ class ViewController: UIViewController {
                             let show = SDLShow()
                             show.graphic = sdlImage
                             show.mainField1 = "Hello"
+
+
+                            let textSoftButton = SDLSoftButton()
+                            textSoftButton.handler = {(press, _) in
+                                if let _ = press {
+                                    if press?.buttonPressMode == SDLButtonPressMode.short {
+                                        print("text button pressed")
+                                    }
+                                }
+                            }
+
+                            textSoftButton.type = .text
+                            textSoftButton.text = "YES"
+                            textSoftButton.softButtonID = NSNumber(integerLiteral: 100)
+
+                            let textWithImageSoftButton = SDLSoftButton()
+                            textWithImageSoftButton.handler = { (press, _) in
+                                if let _ = press {
+                                    if press?.buttonPressMode == SDLButtonPressMode.short {
+                                        print("text image button pressed")
+                                    }
+                                }
+                            }
+                            textWithImageSoftButton.type = SDLSoftButtonType.image
+                            textWithImageSoftButton.text = "imageWithText"
+                            textWithImageSoftButton.image = SDLImage(name: "sdl_logo", ofType: SDLImageType.dynamic, isTemplate: false)
+                            textWithImageSoftButton.softButtonID = NSNumber(integerLiteral: 200)
+
+
+
+                            show.softButtons = [textSoftButton, textWithImageSoftButton]
                             ProxyManager.sharedManager.sdlManager?.send(request: show)
                         }
                     })
@@ -66,6 +97,7 @@ class ViewController: UIViewController {
     }
 
     @objc func onVehicleData(_ notification: SDLRPCNotificationNotification) {
+/*
         guard let OnVehicleData = notification.notification as? SDLOnVehicleData else {
             return
         }
@@ -75,6 +107,7 @@ class ViewController: UIViewController {
         show.mainField3 = "Speed: \(OnVehicleData.speed ?? NSNumber.init(integerLiteral: -1))"
 
         ProxyManager.sharedManager.sdlManager?.send(request: show)
-    }
+  */
+ }
 }
 
