@@ -46,10 +46,11 @@ class ViewController: UIViewController {
 
 
                             let textSoftButton = SDLSoftButton()
-                            textSoftButton.handler = {(press, _) in
+                            textSoftButton.handler = {[unowned self] (press, _) in
                                 if let _ = press {
                                     if press?.buttonPressMode == SDLButtonPressMode.short {
                                         print("text button pressed")
+                                        self.showAlert()
                                     }
                                 }
                             }
@@ -109,5 +110,46 @@ class ViewController: UIViewController {
         ProxyManager.sharedManager.sdlManager?.send(request: show)
   */
  }
+
+
+    func showAlert() {
+        let alertButton1 = SDLSoftButton()
+        alertButton1.handler = {(press, _) in
+            if let _ = press {
+                if press?.buttonPressMode == SDLButtonPressMode.short {
+                    print("alert button1 pressed")
+                }
+            }
+        }
+
+        alertButton1.type = .text
+        alertButton1.text = "YES"
+        alertButton1.softButtonID = NSNumber(integerLiteral: 1000)
+
+        let alertButton2 = SDLSoftButton()
+        alertButton2.handler = {(press, _) in
+            if let _ = press {
+                if press?.buttonPressMode == SDLButtonPressMode.short {
+                    print("alert button1 pressed")
+                }
+            }
+        }
+
+        alertButton2.type = .text
+        alertButton2.text = "NO"
+        alertButton2.softButtonID = NSNumber(integerLiteral: 1100)
+
+        let alert = SDLAlert(alertText1: "Alert1", alertText2: "Alert2", alertText3: "Alert3",
+                             duration: 5000, softButtons: [alertButton1, alertButton2])
+
+        ProxyManager.sharedManager.sdlManager.send(request: alert, responseHandler: { (request, response, error) in
+            print("Alert response is \(String(describing: response))")
+            print("Alert error is \(String(describing: error))")
+
+            if let alertResponse = response as? SDLAlertResponse {
+                print("error is \(String(describing: alertResponse.tryAgainTime))")
+            }
+        })
+    }
 }
 
