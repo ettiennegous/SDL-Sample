@@ -11,7 +11,7 @@ import SmartDeviceLink
 
 class ProxyManager: NSObject {
     private let appName = "HelloTemplate"
-    private let appId = "com.xevo.testapp.0000.helloTemplate"
+    private let appId = "123456789" // "com.xevo.testapp.0000.helloTemplate"
 
     // Manager
     var sdlManager: SDLManager!
@@ -26,10 +26,10 @@ class ProxyManager: NSObject {
     func connect() {
         // Used for USB Connection
         //let lifecycleConfiguration = SDLLifecycleConfiguration(appName: appName, fullAppId: appId)
-        //let lifecycleConfiguration = SDLLifecycleConfiguration(appName: appName, appId: appId)
+        let lifecycleConfiguration = SDLLifecycleConfiguration(appName: appName, appId: appId)
 
         // Used for TCP/IP Connection
-        let lifecycleConfiguration = SDLLifecycleConfiguration(appName: appName, fullAppId: appId, ipAddress: "10.10.120.41", port: 15324)
+        //let lifecycleConfiguration = SDLLifecycleConfiguration(appName: appName, fullAppId: appId, ipAddress: "10.10.120.41", port: 15324)
 
         // App icon image
         /*

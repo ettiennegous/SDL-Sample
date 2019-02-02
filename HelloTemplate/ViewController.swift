@@ -72,7 +72,7 @@ class ViewController: UIViewController {
 
         let show = SDLShow()
         show.mainField2 = "GPS: \(String(describing: OnVehicleData.gps?.latitudeDegrees)), \(String(describing: OnVehicleData.gps?.longitudeDegrees))"
-        show.mainField3 = "Speed: \(OnVehicleData.speed!)"
+        show.mainField3 = "Speed: \(OnVehicleData.speed ?? NSNumber.init(integerLiteral: -1))"
 
         ProxyManager.sharedManager.sdlManager?.send(request: show)
     }
