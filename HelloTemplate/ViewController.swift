@@ -66,7 +66,7 @@ class ViewController: UIViewController {
                                     }
                                 }
                             }
-                            textWithImageSoftButton.type = SDLSoftButtonType.image
+                            textWithImageSoftButton.type = SDLSoftButtonType.both
                             textWithImageSoftButton.text = "imageWithText"
                             textWithImageSoftButton.image = SDLImage(name: "sdl_logo", ofType: SDLImageType.dynamic, isTemplate: false)
                             textWithImageSoftButton.softButtonID = NSNumber(integerLiteral: 200)
