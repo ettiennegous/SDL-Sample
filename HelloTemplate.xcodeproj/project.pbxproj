@@ -11,11 +11,11 @@
 		43D1EB062201643B005600EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D1EB052201643B005600EC /* AppDelegate.swift */; };
 		43D1EB082201643B005600EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D1EB072201643B005600EC /* ViewController.swift */; };
 		43D1EB0B2201643B005600EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D1EB092201643B005600EC /* Main.storyboard */; };
-		43D1EB0D2201643C005600EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43D1EB0C2201643C005600EC /* Assets.xcassets */; };
 		43D1EB102201643C005600EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D1EB0E2201643C005600EC /* LaunchScreen.storyboard */; };
 		43D1EB1B2201643C005600EC /* HelloTemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D1EB1A2201643C005600EC /* HelloTemplateTests.swift */; };
 		43D1EB262201643C005600EC /* HelloTemplateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D1EB252201643C005600EC /* HelloTemplateUITests.swift */; };
 		43D1EB34220164DC005600EC /* ProxyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D1EB33220164DC005600EC /* ProxyManager.swift */; };
+		8904914B22059EDA003A718B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43D1EB0C2201643C005600EC /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -260,7 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43D1EB102201643C005600EC /* LaunchScreen.storyboard in Resources */,
-				43D1EB0D2201643C005600EC /* Assets.xcassets in Resources */,
+				8904914B22059EDA003A718B /* Assets.xcassets in Resources */,
 				43D1EB0B2201643B005600EC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,14 +526,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TGKEN7XA5C;
+				DEVELOPMENT_TEAM = HFLBL54N32;
 				INFOPLIST_FILE = HelloTemplate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xevo.testApp.0000.helloTemplate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.finch.sdl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -546,14 +546,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TGKEN7XA5C;
+				DEVELOPMENT_TEAM = HFLBL54N32;
 				INFOPLIST_FILE = HelloTemplate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.xevo.testApp.0000.helloTemplate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.finch.sdl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

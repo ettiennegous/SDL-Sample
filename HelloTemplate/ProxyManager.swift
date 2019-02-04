@@ -10,8 +10,8 @@ import Foundation
 import SmartDeviceLink
 
 class ProxyManager: NSObject {
-    private let appName = "HelloTemplate"
-    private let appId = "com.xevo.testapp.0000.helloTemplate"
+    private let appName = "Finch"
+    private let appId = "123456789" // "com.xevo.testapp.0000.helloTemplate"
 
     // Manager
     var sdlManager: SDLManager!
@@ -25,19 +25,21 @@ class ProxyManager: NSObject {
 
     func connect() {
         // Used for USB Connection
-        //let lifecycleConfiguration = SDLLifecycleConfiguration(appName: appName, fullAppId: appId)
-        //let lifecycleConfiguration = SDLLifecycleConfiguration(appName: appName, appId: appId)
-
+        let lifecycleConfiguration = SDLLifecycleConfiguration(appName: appName, appId: appId)
+        
         // Used for TCP/IP Connection
-        let lifecycleConfiguration = SDLLifecycleConfiguration(appName: appName, fullAppId: appId, ipAddress: "10.10.120.41", port: 15324)
+        //let lifecycleConfiguration = SDLLifecycleConfiguration(appName: appName, fullAppId: appId, ipAddress: "m.sdl.tools", port: 15636)
 
         // App icon image
         /*
-         if let appImage = UIImage(named: "AppIcon Name") {
-         let appIcon = SDLArtwork(image: appImage, name: "Name to Upload As", persistent: true, as: .JPG /* or .PNG */)
+         if let appImage = UIImage(named: "sdl_logo_green") {
+         let appIcon = SDLArtwork(image: appImage, name: "sdl_logo_green", persistent: true, as: .PNG  or .PNG )
+            
+
          lifecycleConfiguration.appIcon = appIcon
          }
-         */
+ */
+        
 
         let loggingConfig = SDLLogConfiguration.debug()
         loggingConfig.globalLogLevel = SDLLogLevel.verbose
